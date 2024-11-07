@@ -1,0 +1,28 @@
+.link {
+  font-weight: 400;
+  border-bottom: 1px solid;
+}
+
+a:hover {
+  color: "#2f6caa";
+}
+
+.zoom {
+  display: block;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.zoom img{
+  display: block;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.zoom img:hover {
+  transform: scale(1.04);
+}
+
+html {
+	scroll-behavior: smooth;
+}

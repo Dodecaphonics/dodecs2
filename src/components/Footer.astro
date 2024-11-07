@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon/components';
+import logo from '../images/dodecslogo.png';
+import { Image } from 'astro:assets';
+
+---
+
+<div class="bg-dark-gray p-4 py-12 gap-8 flex flex-col text-white items-center">
+  <Image src={logo} alt="logo" class="w-[8em]"/>
+
+  <div class="flex flex-row gap-3 m-auto">
+    <a href="http://www.instagram.com/dartmouthdodecs" class="cursor hover:text-offwhite transition">
+      <Icon name="mdi:instagram"/>
+    </a>
+    <a href="https://www.facebook.com/DartmouthDodecs" class="cursor hover:text-offwhite transition">
+      <Icon name="mdi:facebook"/>
+    </a>
+    <a href="https://open.spotify.com/artist/7vyQHyJICvNsfju2JdVoMY?play=true&utm_source=open.spotify.com&utm_medium=open" class="cursor hover:text-offwhite transition">
+      <Icon name="mdi:spotify"/>
+    </a>
+    <a href="https://www.youtube.com/@DartmouthDodecs" class="cursor hover:text-offwhite transition">
+      <Icon name="mdi:youtube"/>
+    </a>
+    <a href="http://www.twitter.com/Dodecaphonics" class="cursor hover:text-offwhite transition">
+      <Icon name="mdi:twitter"/>
+    </a>
+    <a href="mailto:dodecs@dartmouth.edu" class="cursor hover:text-offwhite transition">
+      <Icon name="mdi:email"/>
+    </a>
+  </div>
+  <p class="font-sans font-light italic text-offwhite">© The Dartmouth Dodecaphonics 2024. All rights reserved.</p>
+</div>
+
+<style>
+  [data-icon] {
+      font-size: 1.8rem;
+      color: var(--brand-color);
+  }
+  </style>
