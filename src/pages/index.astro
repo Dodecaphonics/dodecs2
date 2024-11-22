@@ -57,8 +57,8 @@ import { toursList } from '../data/tour.ts';
 		<div class="flex flex-col grid gap-4 sm:gap-8 px-4 py-8 sm:py-16 bg-dark-gray">
 			<p class="font-display font-light text-white text-2xl sm:text-4xl sm:m-auto">Check out our performances!</p>
 			<div class="flex flex-col lg:flex-row w-full md:w-[90%] justify-center m-auto gap-4">
-				<iframe class="aspect-video rounded" width="100%" height="auto" src="https://www.youtube.com/embed/q_2CgAKTyk8?si=CJzDl5YwdibEuJAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-				<iframe class="aspect-video rounded" width="100%" height="auto" src="https://www.youtube.com/embed/ELHGe6rLhwY" title="Love on the Brain - Dodecs 17W" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<iframe class="aspect-video rounded" width="100%" height="auto" src="https://www.youtube.com/embed/q_2CgAKTyk8?si=CJzDl5YwdibEuJAe" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				<iframe class="aspect-video rounded" width="100%" height="auto" src="https://www.youtube.com/embed/ELHGe6rLhwY" title="Love on the Brain - Dodecs 17W" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 			</div>
 			<a href="/media" class="flex font-light justify-center text-lg sm:text-xl px-4 py-3 border-[1.5px] m-auto text-white border-white hover:text-dark-gray hover:bg-white transition w-[8em]">
 				See more
@@ -75,7 +75,7 @@ import { toursList } from '../data/tour.ts';
 				{ toursList.map((tour) => 
 				<div class="flex flex-col items-center min-w-[24em] gap-2 align-center">
 					<div class="zoom">
-						<img src={`../../images/tour/${tour.img}`} alt={tour.text} class="rounded"/>
+						<Image src={import(`../images/tour/${tour.img}`)} alt={tour.text} class="rounded"/>
 					</div>
 					<p class="text-base sm:text-lg font-sans align-center font-light text-light-gray">{tour.text}</p>
 				</div>
