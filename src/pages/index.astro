@@ -75,7 +75,7 @@ import { toursList } from '../data/tour.ts';
 				{ toursList.map((tour) => 
 				<div class="flex flex-col items-center min-w-[24em] gap-2 align-center">
 					<div class="zoom">
-						<Image src={import(`../images/tour/${tour.img}`)} alt={tour.text} class="rounded"/>
+						<img src={"../../src/images/tour/" + tour.img} alt={tour.text} class="rounded"/>
 					</div>
 					<p class="text-base sm:text-lg font-sans align-center font-light text-light-gray">{tour.text}</p>
 				</div>
