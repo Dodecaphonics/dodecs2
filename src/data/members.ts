@@ -92,13 +92,6 @@ export const membersList: Member[] = [
     photo: "HenryS.jpg"
   },
   {
-    name: "Henry Stauch '27",
-    hometown: "Niwot, CO",
-    major: "N/A",
-    fact: "Bass",
-    photo: "HenryS.jpg"
-  },
-  {
     name: "Audrey Kim '27",
     hometown: "Ambler, PA",
     major: "Neuroscience",
