@@ -2,6 +2,63 @@
 import Layout from '../layouts/Layout.astro';
 import { membersList } from "../data/members";
 
+const pastMembers = [
+    "Sydney Fortner '24", "Nina Sloan '24", "David Lim '24", "Adam Budin '24", 
+    "Sydney Burton '23", "Izzy Vratimos '23", "Andy Bean '23", "Josh Vogel '23", 
+    "Amrita Misha '22", "Jordan Sanz '22", "Jake Hanssen '22", "Kamila Zakowicz '22", 
+    "John Moreland '22", "Ashwini Narayanan '22", "Evan Christo '21", "Maxine Perroni-Scharf '21", 
+    "Rory Schadler '21", "Caitlin Wanic '21", "Ben Coleman '20", "Daniella Kubiak '20", 
+    "Nashe Mutenda '20", "Aaron Samuals '20", "Matt Spencer '20", "Michelle He '19", 
+    "Malcolm Joung '19", "Emily Levine '19", "Christiana Reagan '19", "Geoff Weber '19", 
+    "Jacob Cutler '18", "Justine Goggin '18", "Tara Joshi '18", "Tom Latta '18", 
+    "Morgan McGonagle '18", "Zakios Meghrouni-Brown '18", "Daniel Shlien '18", 
+    "Alyssa Gonzalez '17", "Edward Kim '17", "Alisa White '17", "Chelsea Lim '16", 
+    "Rory Page '16", "Emma PeConga '16", "Jimmy Ragan '16", "Michael Blum '15", 
+    "Phoebe Bodurtha '15", "Daniel Calano-Moore '15", "Hayley Lynch '15", 
+    "Katelyn Onufrey '15", "Zack Cutler '14", "Patrick Gould '14", "Sarah Peck '14", 
+    "Abby Yazbak '14", "Evan Gelfand '13", "Jessica Hoffman '13", "Talene Mnahon '13", 
+    "Luke Murphy '13", "Janie Abernethy '12", "Carol Brown '12", "Erika Flowers '12", 
+    "Austin Greenfield '12", "William Hix '12", "Max Moran '12", "Michelle Shankar '12", 
+    "Anna Dobbin '11", "Adrienne Hoarfrost '11", "Andrew Purpura '11", "Stefan Uddenberg '11", 
+    "Dan Van Deusen '11", "Remi Gottheil '10", "Allie Miller '10", "Tyler Quinn '10", 
+    "Andrew Rayner '10", "Alex Cook '09", "Courtnery Davis '09", "Elise Hogan '09", 
+    "Kyle Lad '09", "Marley McMillan '09", "Caleb Ballou '08", "Jarred Colli '08", 
+    "Lyndsey Girod '08", "Justin Sanford '08", "Liz Vaughan '08", "Lauren Wang '08", 
+    "Josh Wexler '08", "Jess Chervin '07", "Charlie Guthrie '07", "Rachel Karpf '07", 
+    "Anna Sian '07", "Dana Walker '07", "Josh Weinberg '07", "Paul Wright '07", 
+    "Bart Butler '06", "Michael Guzman '06", "Mikee Guzman '06", "Kaethe Henning '06", 
+    "Bradford Proctor '06", "Erin Rumsey '06", "Benjamin Schwartz '05", "Matt Bartek '05", 
+    "Saul Kliorys '05", "Linda Park '05", "Kerrin Egalka '04", "Maya Graham '04", 
+    "Alana McLaughlin '04", "Maya Srikanth '04", "Eugenia Albina '03", "John Brandsema '02", 
+    "KJ Hill '02", "Brian Jacobs '02", "Swathi Reddy '02", "David Smith '02", 
+    "Miell Yi '02", "Evangeline Choe '01", "Sarah Craft '01", "James Kittredge '01", 
+    "David Latham '01", "James Noonan '01", "Ryan Owens '01", "Emily Schoonmaker '01", 
+    "Timothy Holm '00", "Jennifer Nycz '00", "Daniel Scholnick '00", "Connor Smith '00", 
+    "Kristen Earl '99", "Lauren Gibson '99", "David Rapson '99", "Helena Shanahan '99", 
+    "Matthew Wrobel '99", "Thomas Farley '98", "Mario Martinus '98", "Carrie Spring '98", 
+    "Jeanne Clark '97", "Suparna Dutta '97", "Eliana Marcenaro '97", "David McDowell '97", 
+    "Andrea Meacham '97", "Sarah Nolan '97", "Simon Tang '97", "Greg Tufaro '97", 
+    "Nina Fallon '96", "Jeneen Graham '96", "Leslie Jennings '96", "Jorge Motoshige '96", 
+    "L.A. Opulauoho '96", "Bradley Parks '96", "Katherine Sasaki '96", "Daisy Alpert '96", 
+    "Anthony Choe '95", "Jen Hee '95", "Matthew Reese '95", "Eric Waters '95", 
+    "Allison Ahearn '94", "Kevin Davis '94", "Megan Mitchell '94", "Matthew Peterson '94", 
+    "Judd Serotta '94", "Kerin Zellman '94", "Brandon Adams '93", "Lewis Cirne '93", 
+    "Annie Edgerton '93", "Joshua Green '93", "David Kaiser '93", "Norm Roye '93", 
+    "Gretchen Almy '92", "Liane Bromer '92", "Tara Grabowsby '92", "Christine McCann '92", 
+    "Henry Spindler '92", "Danielle Tornello '92", "Christopher Wall '92", "Gregory Abel '91", 
+    "Alexandra Fischer '91", "Brett Haber '91", "Thomas Hong '91", "David Martosko '91", 
+    "Catherine Naaman '91", "Allison Berger '90", "Torrance Blaisdell '90", 
+    "Jessica Hayden '90", "John Kornet '90", "Rebecca Kornet '90", "Laura McGrory '90", 
+    "Stefanie Parrott '90", "Scott Spring '90", "Nick Stahl '90", "Joshua Adler '89", 
+    "Edward Barker '89", "Erirch Fischer '89", "Adam Lehman '89", "Florian Miedel '89", 
+    "Rebecca Reese '89", "Heidi Reich '89", "Alexander Selby '89", "Linda Brown '88", 
+    "Bob Lantz '88", "A. Steward Lussky '88", "John Olson '88", "Robert Yee '88", 
+    "Kristin Zimmermann '88", "Catherine Baker '87", "John Barpoulis '87", 
+    "Kendra Cook '87", "Kevin Wilkins '87", "Heath Barker '86", "John Eipper '86", 
+    "Janet Friday '86", "Stewart Pierson '86", "Richard Joyce '85", "Peter Lehmann '85"
+]
+
+
 ---
 
 <Layout title="Members">
@@ -23,6 +80,18 @@ import { membersList } from "../data/members";
         </div>
       </div>
       )}
+    </div>
+    <div class="flex py-6 flex-col pt-10">
+      <p class="text-xl font-display font-thin m-auto text-light-gray pb-4">Past Members</p>
+      <div class="flex m-auto">
+      <div class="columns-3 sm:columns-3 md:columns-5 lg:columns-6 gap-1">
+        {pastMembers.map((member) => 
+        <div>
+          <p class="font-sans font-light text-sm text-light-gray leading-relaxed">{member}</p>
+        </div>
+      )}
+      </div>
+    </div>
     </div>
   </div>
 </Layout>
