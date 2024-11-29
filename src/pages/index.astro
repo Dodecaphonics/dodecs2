@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import mainPage from '../images/group-photos/group-cropped.jpeg';
 import logo from '../images/dodecslogo.png';
-import { toursList } from '../data/tour.ts';
 import { getCollection } from 'astro:content';
 
 const allTours = await getCollection('tours');
