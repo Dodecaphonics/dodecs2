@@ -2,7 +2,7 @@
 
 This is the second iteration of the Dodecs website and can be viewed at [dodecs.com](dodecs.com). The first version of the website is [here](https://github.com/Dodecaphonics/dodecs).
 
-The list of members can be edited in *src/content/members*. Tour info can be edited in *src/data/tour.ts*.
+The list of members can be edited in *src/content/members*. Tour info can be edited in *src/content/tours*.
 
 This website was made with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/). Check out the documentation to learn how to make changes.
 

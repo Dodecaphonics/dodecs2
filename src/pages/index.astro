@@ -4,6 +4,9 @@ import { Image } from 'astro:assets';
 import mainPage from '../images/group-photos/group-cropped.jpeg';
 import logo from '../images/dodecslogo.png';
 import { toursList } from '../data/tour.ts';
+import { getCollection } from 'astro:content';
+
+const allTours = await getCollection('tours');
 ---
 
 <Layout title="Dodecaphonics">
@@ -13,7 +16,7 @@ import { toursList } from '../data/tour.ts';
 		<a href="/#intro" class="scroll-smooth hidden sm:block">
 			<Image src={logo} alt="logo" class="absolute w-[20%] right-[2em] rotate-12 hover:rotate-[20deg] drop-shadow-md transition z-10"/>
 		</a>
-		<div class="grid gap-1 p-2 sm:p-6">
+		<div class="grid gap-1 p-3 sm:p-6">
 			<p class="md:text-6xl sm:text-4xl text-3xl font-display">The Dartmouth Dodecaphonics</p>
 			<p class="font-sans font-light text-light-gray">Dartmouth’s oldest premier gender-inclusive a cappella group, est. 1984</p>
 		</div>
@@ -72,13 +75,14 @@ import { toursList } from '../data/tour.ts';
 				<p class="text-light-gray font-light font-sans">Each winter we tour around the nation and love meeting fans and alumni along the way.</p>
 			</div>
 			<div class="flex flex-row gap-4 w-full overflow-scroll">
-				{ toursList.map((tour) => 
-				<div class="flex flex-col items-center min-w-[24em] gap-2 align-center">
-					<div class="zoom">
-						<img src={`../../src/images/tour/${tour.img}`} alt={tour.text} class="rounded"/>
-					</div>
-					<p class="text-base sm:text-lg font-sans align-center font-light text-light-gray">{tour.text}</p>
+			<!-- show tours from most recent to least recent-->
+			{ allTours.sort((a, b) => b.data.year - a.data.year).map((tour) => 
+			<div class="flex flex-col items-center min-w-[24em] gap-2 align-center">
+				<div class="zoom object-cover">
+					<Image src={tour.data.image} alt={tour.data.text} class="rounded object-cover aspect-[4/3] "/>
 				</div>
+				<p class="text-base sm:text-lg font-sans align-center font-light text-light-gray">{tour.data.text}</p>
+			</div>
 			)}
 			</div>
 		</div>
