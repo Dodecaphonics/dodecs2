@@ -1,4 +1,4 @@
-import { defineCollection, reference, z } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 
 const members = defineCollection({
   type: 'data',
@@ -10,6 +10,15 @@ const members = defineCollection({
     image: image(),
     year: z.number()
   })
-})
+});
 
-export const collections = { members };
+const tours = defineCollection({
+  type: 'data',
+  schema: ({ image }) => z.object({
+    text: z.string(),
+    image: image(),
+    year: z.number()
+  })
+});
+
+export const collections = { members, tours };

@@ -63,9 +63,9 @@ const pastMembers = [
 ---
 
 <Layout title="Members">
-  <div class="p-4 md:p-6 text-dark-gray w-full" >
-    <div class="flex pb-6 flex-col">
-      <p class="text-4xl font-display font-thin m-auto">Current Members</p>
+  <div class="p-3 md:p-6 text-dark-gray w-full" >
+    <div class="flex sm:pb-6 flex-col">
+      <p class="text-4xl font-display font-thin sm:m-auto">Current Members</p>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 py-4 max-w-[65em] mx-auto">
     <!-- Show all members, sorted by class year then alphabetically -->
@@ -75,10 +75,10 @@ const pastMembers = [
           <Image class="animate-appear" src={member.data.image} alt={member.data.name}/>
         </div>
         <div>
-          <p class="font-display text-xl md:text-2xl font-light">{member.data.name}</p>
-          <p class="font-light text-sm sm:text-base">Hometown: {member.data.hometown}</p>
-          <p class="font-light text-sm sm:text-base">Major: {member.data.major}</p>
-          <p class="font-light text-sm sm:text-base">Fun Fact: {member.data.fact}</p>
+          <p class="font-display text-lg sm:text-xl md:text-2xl font-light">{member.data.name}</p>
+          <p class="font-light text-xs sm:text-base">Hometown: {member.data.hometown}</p>
+          <p class="font-light text-xs sm:text-base">Major: {member.data.major}</p>
+          <p class="font-light text-xs sm:text-base">Fun Fact: {member.data.fact}</p>
         </div>
       </div>
     )}
@@ -86,7 +86,7 @@ const pastMembers = [
     <div class="flex py-6 flex-col pt-10">
       <p class="text-xl font-display font-thin m-auto text-light-gray pb-4">Past Members</p>
       <div class="flex m-auto">
-      <div class="columns-3 sm:columns-3 md:columns-5 lg:columns-6 gap-1">
+      <div class="columns-2 sm:columns-3 md:columns-5 lg:columns-6 gap-1">
         {pastMembers.map((member) => 
         <div>
           <p class="font-sans font-light text-sm text-light-gray leading-relaxed">{member}</p>
