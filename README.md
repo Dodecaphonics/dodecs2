@@ -1,5 +1,7 @@
 # Dodecs Website v2
 
+Note from DQ 26: I was a bad webmaster for 2 years, but my sister Annie Qiu '24 is the goat and re-did the website for us :). 
+
 This is the second iteration of the Dodecs website and can be viewed at [dodecs.com](dodecs.com). The first version of the website is [here](https://github.com/Dodecaphonics/dodecs).
 
 The list of members can be edited in *src/content/members*. Tour info can be edited in *src/data/tour.ts*.
@@ -51,4 +53,4 @@ npm run dev
 The website is deployed through [Render](onrender.com). To manage the website's deployment, log in to Render through the Dodecs gmail and find the dodecs website project in the dashboard. Every time a commit is pushed to this depo, the website will automatically deploy again in Render. The website domain is managed through [GoDaddy](godaddy.com).
 
 ## Contact
-For questions related to this website, contact Annie at annierqiu@gmail.com.
+For questions related to this website, contact Annie Qiu at annierqiu@gmail.com.
