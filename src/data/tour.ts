@@ -5,6 +5,10 @@ interface Tour {
 
 export const toursList: Tour[] = [
   {
+    text: "Colorado, 2025",
+    img: "co.jpg"
+  },
+  {
     text: "Montreal, 2022",
     img: "montreal.JPG"
   },
